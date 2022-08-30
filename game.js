@@ -16,14 +16,15 @@ function main(currentTime) {
 
   update();
   draw();
-
-  function update() {
-    updateSnake();
-  }
-}
-
-function draw() {
-  drawSnake(gameBoard);
 }
 
 window.requestAnimationFrame(main);
+
+function update() {
+  updateSnake();
+}
+
+function draw() {
+  gameBoard.innerHTML = "";
+  drawSnake(gameBoard);
+}
